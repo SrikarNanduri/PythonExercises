@@ -68,11 +68,12 @@ def game():
             print("Its Draw!!")
             break
 
-
 game()
-new_game = input("Do you want to Play again").lower()
-if new_game == "y":
-    print_board()
-    game()
-else:
-    print("thanks for playing :)")
+while True:
+        new_game = input("Do you want to Play again: ").lower()
+        if new_game == "y":
+            for i in range(9):
+                board[i] = ""
+            game()
+        else:
+            print("thanks for playing :)")
